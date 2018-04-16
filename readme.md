@@ -7,12 +7,17 @@ This model is implement by GaborFilter, some preprocess is done first.
 ## RUN
 
 1.Be sure you install MATLAB2012+ first.　　
-2.Change the path in FingerVeinRec.m to match two images.　　
+
+2.Change the path in FingerVeinRec.m to match two images.　
+　
 3.Change the path in FingerVeinRecognition_export.m to generate a GUI.(A simple dat file is used here.)　　
+
 
 ## Data-Set
 １．The first Data-set can be find here [fvc-2004](http://bias.csr.unibo.it/fvc2004/download.asp);You can also find it in other place. It's a open source database.
+
 2. The second Data-Set can be find here[SDUMLA_HMT](http://mla.sdu.edu.cn/info/1006/1195.htm)
+
 
 # 指静脉识别模型1
 1.使用高斯滤波器+Gabor八方向滤波器实现  
@@ -23,8 +28,4 @@ This model is implement by GaborFilter, some preprocess is done first.
 2.更改FingerVeinRec.m中的图片路径来测试两幅图像之间的欧式距离；  
 3.更改FingerVeinRecognition_export.m中的文件路径来使用数据集和生成GUI。（包含数据库生成）；
 
-**You can contace me with any problem. My email: awinyimgprocess at gmail dot com**
-
-２．包含了一个GUI界面，需要先了解ｍａｔｌａｂGUI生成。
-３.　在FｉｎｇｅｒＶｅｉｎＲｅｃｏｇｎｉｔｉｏｎ＿ｅｘｐｏｒｔ．ｍ中修改为自己的数据库路径。
-＃＃　数据集
+**You can contace me with any problem.  My email: awinyimgprocess at gmail dot com**
