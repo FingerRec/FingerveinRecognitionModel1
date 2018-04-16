@@ -1,0 +1,10 @@
+本软件用于隐藏执行EXE文件时自动生成的DOS界面。
+
+用法：
+
+   首先将"suppress.ini"用写字本打开，把文件中"test.exe"修改成你要执行的EXE文件的名称，接下来直接运行"suppress.exe"即可。
+
+注意事项：
+   
+    1.可以更改"suppress.exe"的文件名，但不要更改"suppress.ini"文件名称。
+    2."suppress.exe", "suppress.ini"和你要执行的EXE文件必须处于同一文件夹下。

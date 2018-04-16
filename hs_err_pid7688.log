@@ -1,0 +1,249 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_windows_x86.cpp:114), pid=7688, tid=7684
+#  Error: guarantee(result == -1,"Unexpected result from topLevelExceptionFilter")
+#
+# JRE version: 6.0_17-b04
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.3-b01 mixed mode windows-amd64 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000ce8b800):  JavaThread "main" [_thread_in_native, id=7684, stack(0x00000000007e0000,0x00000000047e0000)]
+
+Stack: [0x00000000007e0000,0x00000000047e0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.mathworks.jmi.NativeMatlab.ProcessPendingEvents()Z+0
+j  com.mathworks.jmi.NativeMatlab.processPendingEvents()Z+8
+j  com.mathworks.jmi.Matlab$ProcessPendingEvents.callBooleanMethod(Ljava/lang/Object;)Z+0
+j  com.mathworks.util.FactoryUtils.processPendingEvents()Z+12
+j  com.mathworks.widgets.desk.Desktop.canClose()Z+38
+j  com.mathworks.mde.desk.MLDesktop.canClose()Z+113
+j  com.mathworks.mde.desk.MLDesktop$2.call()Ljava/lang/Boolean;+4
+j  com.mathworks.mde.desk.MLDesktop$2.call()Ljava/lang/Object;+1
+j  com.mathworks.jmi.Matlab.isOkToExit()Z+54
+v  ~StubRoutines::call_stub
+j  com.mathworks.jmi.NativeMatlab.SendMatlabMessage(Ljava/lang/Object;)Ljava/lang/Object;+0
+j  com.mathworks.jmi.NativeMatlab.sendMatlabMessage(Ljava/lang/Object;)Ljava/lang/Object;+22
+j  com.mathworks.jmi.MatlabLooper.sendMatlabMessage(Lcom/mathworks/services/message/MWMessage;)Ljava/lang/Object;+20
+j  com.mathworks.jmi.Matlab.mtFevalConsoleOutput(Ljava/lang/String;[Ljava/lang/Object;I)Ljava/lang/Object;+58
+j  com.mathworks.mde.desk.MLDesktop$9.run()V+14
+j  com.mathworks.jmi.NativeMatlab.dispatchMTRequests(Z)V+57
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000007e9c8800 JavaThread "Image Fetcher 0" daemon [_thread_blocked, id=8036, stack(0x0000000018470000,0x00000000184f0000)]
+  0x000000007e9c4000 JavaThread "FileDecorationCache request queue" [_thread_blocked, id=7488, stack(0x00000000184f0000,0x0000000018570000)]
+  0x000000007e9c3800 JavaThread "pool-7-thread-1" [_thread_blocked, id=7612, stack(0x0000000018380000,0x0000000018400000)]
+  0x000000007e9c2800 JavaThread "Foxtrot Multi Worker Thread Runner #1" daemon [_thread_blocked, id=8068, stack(0x0000000018620000,0x00000000186a0000)]
+  0x0000000062b67000 JavaThread "Active Reference Queue Daemon" daemon [_thread_blocked, id=7460, stack(0x000000002a350000,0x000000002a3d0000)]
+  0x0000000062b62000 JavaThread "Timer-36" daemon [_thread_blocked, id=7360, stack(0x000000002a2d0000,0x000000002a350000)]
+  0x0000000062b65000 JavaThread "Prefs Updater" daemon [_thread_blocked, id=3796, stack(0x0000000029180000,0x0000000029200000)]
+  0x0000000062b66800 JavaThread "Timer-8" daemon [_thread_blocked, id=368, stack(0x0000000072230000,0x00000000722b0000)]
+  0x0000000062b64000 JavaThread "Explorer NavigationContext request queue" [_thread_blocked, id=6704, stack(0x00000000726c0000,0x0000000072740000)]
+  0x0000000062b60800 JavaThread "AddressBar directory emptiness poller" [_thread_blocked, id=1648, stack(0x00000000721b0000,0x0000000072230000)]
+  0x0000000062b62800 JavaThread "Timer-1" [_thread_blocked, id=3588, stack(0x000000006d840000,0x000000006d8c0000)]
+  0x0000000062b60000 JavaThread "TimerQueue" daemon [_thread_blocked, id=7956, stack(0x0000000069c70000,0x0000000069cf0000)]
+  0x0000000062b5f000 JavaThread "FelixPackageAdmin" daemon [_thread_blocked, id=7952, stack(0x0000000068c20000,0x0000000068ca0000)]
+  0x0000000062b5e800 JavaThread "FelixStartLevel" daemon [_thread_blocked, id=7948, stack(0x0000000068b20000,0x0000000068ba0000)]
+  0x0000000062b5d800 JavaThread "FelixDispatchQueue" daemon [_thread_blocked, id=7944, stack(0x0000000068aa0000,0x0000000068b20000)]
+  0x00000000513ce000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=6248, stack(0x0000000067490000,0x0000000067510000)]
+  0x00000000513d0800 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=7908, stack(0x0000000067410000,0x0000000067490000)]
+  0x00000000513cf800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=7236, stack(0x0000000067310000,0x0000000067390000)]
+  0x00000000513cb800 JavaThread "AWT-Shutdown" [_thread_blocked, id=7892, stack(0x0000000067290000,0x0000000067310000)]
+  0x00000000513cd000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=7884, stack(0x0000000067210000,0x0000000067290000)]
+  0x00000000513ce800 JavaThread "Timer-0" [_thread_blocked, id=7256, stack(0x0000000007990000,0x0000000007a10000)]
+  0x00000000513cc800 JavaThread "EventMgr Dispatcher" daemon [_thread_in_native, id=7804, stack(0x0000000010e50000,0x0000000014e50000)]
+  0x00000000513cb000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7252, stack(0x0000000007900000,0x0000000007980000)]
+  0x00000000513fa800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=5196, stack(0x0000000059640000,0x000000005d640000)]
+  0x00000000513f6000 JavaThread "CompilerThread0" daemon [_thread_blocked, id=1972, stack(0x0000000055640000,0x0000000059640000)]
+  0x00000000513ca000 JavaThread "Attach Listener" daemon [_thread_blocked, id=7160, stack(0x0000000007880000,0x0000000007900000)]
+  0x00000000513c4000 JavaThread "Finalizer" daemon [_thread_blocked, id=6856, stack(0x00000000555c0000,0x0000000055640000)]
+  0x000000000cf64800 JavaThread "Reference Handler" daemon [_thread_blocked, id=440, stack(0x0000000055540000,0x00000000555c0000)]
+=>0x000000000ce8b800 JavaThread "main" [_thread_in_native, id=7684, stack(0x00000000007e0000,0x00000000047e0000)]
+
+Other Threads:
+  0x00000000513c1800 VMThread [stack: 0x0000000051540000,0x0000000055540000] [id=4976]
+  0x0000000051427000 WatcherThread [stack: 0x000000005d640000,0x0000000061640000] [id=7788]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 14144K, used 13518K [0x000000003e150000, 0x000000003f150000, 0x0000000041250000)
+  eden space 12160K, 96% used [0x000000003e150000,0x000000003ecbfbe8,0x000000003ed30000)
+  from space 1984K, 91% used [0x000000003ef60000,0x000000003f123e80,0x000000003f150000)
+  to   space 2112K, 0% used [0x000000003ed30000,0x000000003ed30000,0x000000003ef40000)
+ PSOldGen        total 97280K, used 77897K [0x0000000034e50000, 0x000000003ad50000, 0x000000003e150000)
+  object space 97280K, 80% used [0x0000000034e50000,0x0000000039a62520,0x000000003ad50000)
+ PSPermGen       total 111104K, used 64683K [0x000000002ce50000, 0x0000000033ad0000, 0x0000000034e50000)
+  object space 111104K, 58% used [0x000000002ce50000,0x0000000030d7af90,0x0000000033ad0000)
+
+Dynamic libraries:
+0x00007ff6b85b0000 - 0x00007ff6b85e2000 	D:\QMDownload\bin\win64\MATLAB.exe
+0x00007ffb99e70000 - 0x00007ffb9a01d000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb97ac0000 - 0x00007ffb97bfe000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffb97130000 - 0x00007ffb97245000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x0000000074460000 - 0x0000000074554000 	D:\QMDownload\bin\win64\libut.dll
+0x0000000073f70000 - 0x00000000740ad000 	D:\QMDownload\bin\win64\libmwfl.dll
+0x000000007bed0000 - 0x000000007c183000 	D:\QMDownload\bin\win64\libmwservices.dll
+0x0000000074970000 - 0x0000000074b06000 	D:\QMDownload\bin\win64\mcr.dll
+0x00000000758a0000 - 0x0000000075952000 	D:\QMDownload\bin\win64\libmwi18n.dll
+0x000000006dde0000 - 0x000000006deb3000 	C:\WINDOWS\WinSxS\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.8387_none_08e793bfa83a89b5\MSVCP90.dll
+0x000000006db60000 - 0x000000006dc03000 	C:\WINDOWS\WinSxS\amd64_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.8387_none_08e793bfa83a89b5\MSVCR90.dll
+0x000000007a560000 - 0x000000007a569000 	D:\QMDownload\bin\win64\boost_system-vc90-mt-1_44.dll
+0x000000007a2d0000 - 0x000000007a2e2000 	D:\QMDownload\bin\win64\boost_thread-vc90-mt-1_44.dll
+0x000000006dc60000 - 0x000000006ddd1000 	D:\QMDownload\bin\win64\icuuc44.dll
+0x000000006dc40000 - 0x000000006dc53000 	D:\QMDownload\bin\win64\icuio44.dll
+0x0000000180000000 - 0x0000000180046000 	D:\QMDownload\bin\win64\tbb.dll
+0x00007ffb97ab0000 - 0x00007ffb97ab7000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffb8a8a0000 - 0x00007ffb8aa29000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffb97a00000 - 0x00007ffb97aaa000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffb97880000 - 0x00007ffb979f7000 	C:\WINDOWS\system32\USER32.dll
+0x00000000049c0000 - 0x00000000049cb000 	D:\QMDownload\bin\win64\libmwresource_core.dll
+0x00000000049d0000 - 0x0000000004cc6000 	D:\QMDownload\bin\win64\libmwMATLAB_res.dll
+0x000000007a3b0000 - 0x000000007a3c0000 	D:\QMDownload\bin\win64\boost_date_time-vc90-mt-1_44.dll
+0x000000007a170000 - 0x000000007a19c000 	D:\QMDownload\bin\win64\boost_filesystem-vc90-mt-1_44.dll
+0x000000007a250000 - 0x000000007a263000 	D:\QMDownload\bin\win64\boost_signals-vc90-mt-1_44.dll
+0x00007ffb97850000 - 0x00007ffb97866000 	C:\WINDOWS\system32\imagehlp.dll
+0x0000000075a20000 - 0x0000000075ae2000 	D:\QMDownload\bin\win64\libmx.dll
+0x0000000004ce0000 - 0x0000000004d01000 	D:\QMDownload\bin\win64\libmwmfl_scalar.dll
+0x0000000075f10000 - 0x0000000075f5d000 	D:\QMDownload\bin\win64\mpath.dll
+0x000000007b680000 - 0x000000007bbe1000 	D:\QMDownload\bin\win64\mlutil.dll
+0x0000000004d10000 - 0x0000000004d2a000 	D:\QMDownload\bin\win64\libmwMATLAB_settings_res.dll
+0x0000000004d30000 - 0x0000000004d77000 	D:\QMDownload\bin\win64\boost_serialization-vc90-mt-1_44.dll
+0x00007ffb94360000 - 0x00007ffb94404000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.9600.17810_none_34ae2abd958aedeb\COMCTL32.dll
+0x00007ffb97580000 - 0x00007ffb97636000 	C:\WINDOWS\system32\COMDLG32.dll
+0x00007ffb92460000 - 0x00007ffb92476000 	C:\WINDOWS\SYSTEM32\NETAPI32.dll
+0x00007ffb97510000 - 0x00007ffb9756a000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffb97cd0000 - 0x00007ffb991fb000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffb993b0000 - 0x00007ffb99544000 	C:\WINDOWS\system32\ole32.dll
+0x00007ffb97c00000 - 0x00007ffb97cc1000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x0000000075000000 - 0x000000007536b000 	D:\QMDownload\bin\win64\iqm.dll
+0x0000000079fb0000 - 0x0000000079fe7000 	D:\QMDownload\bin\win64\libmwbridge.dll
+0x000000006d980000 - 0x000000006d9a5000 	D:\QMDownload\bin\win64\libmex.dll
+0x000000006d8c0000 - 0x000000006d973000 	D:\QMDownload\bin\win64\m_dispatcher.dll
+0x000000006d4c0000 - 0x000000006d739000 	D:\QMDownload\bin\win64\mcos.dll
+0x000000006d360000 - 0x000000006d4b2000 	D:\QMDownload\bin\win64\libmwgui.dll
+0x000000006c9b0000 - 0x000000006d353000 	D:\QMDownload\bin\win64\hg.dll
+0x000000006c8b0000 - 0x000000006c9ad000 	D:\QMDownload\bin\win64\hgutils.dll
+0x000000006c080000 - 0x000000006c8a1000 	D:\QMDownload\bin\win64\m_interpreter.dll
+0x0000000075710000 - 0x00000000757c1000 	D:\QMDownload\bin\win64\jmi.dll
+0x000000006bfc0000 - 0x000000006c07d000 	D:\QMDownload\bin\win64\udd_mi.dll
+0x0000000004d90000 - 0x000000000505a000 	D:\QMDownload\bin\win64\uiw.dll
+0x000000006bfa0000 - 0x000000006bfc0000 	D:\QMDownload\bin\win64\mwoles05.DLL
+0x000000006bf20000 - 0x000000006bf9c000 	D:\QMDownload\bin\win64\comcli.dll
+0x000000006bf10000 - 0x000000006bf1c000 	D:\QMDownload\bin\win64\mlautoregister.dll
+0x0000000005060000 - 0x0000000005070000 	D:\QMDownload\bin\win64\boost_iostreams-vc90-mt-1_44.dll
+0x00007ffb99cb0000 - 0x00007ffb99dff000 	C:\WINDOWS\system32\GDI32.dll
+0x000000007a010000 - 0x000000007a035000 	D:\QMDownload\bin\win64\LIBEXPAT.dll
+0x000000006bd10000 - 0x000000006bf01000 	D:\QMDownload\bin\win64\icuin44.dll
+0x0000000010000000 - 0x0000000010e41000 	D:\QMDownload\bin\win64\icudt44.dll
+0x00007ffb977a0000 - 0x00007ffb9784a000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffb995b0000 - 0x00007ffb99609000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x00007ffb99a10000 - 0x00007ffb99b50000 	C:\WINDOWS\system32\RPCRT4.dll
+0x000000007a210000 - 0x000000007a228000 	D:\QMDownload\bin\win64\zlib1.dll
+0x000000006bc90000 - 0x000000006bd0f000 	D:\QMDownload\bin\win64\xmlcore.dll
+0x000000007bc30000 - 0x000000007be83000 	D:\QMDownload\bin\win64\xerces-c_2_7.dll
+0x00007ffb99b50000 - 0x00007ffb99ba4000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x00007ffb96220000 - 0x00007ffb9622c000 	C:\WINDOWS\SYSTEM32\netutils.dll
+0x00007ffb96d30000 - 0x00007ffb96d56000 	C:\WINDOWS\SYSTEM32\srvcli.dll
+0x00007ffb92440000 - 0x00007ffb92457000 	C:\WINDOWS\SYSTEM32\wkscli.dll
+0x00007ffb97870000 - 0x00007ffb97879000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffb997f0000 - 0x00007ffb99a01000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x000000006bbc0000 - 0x000000006bc88000 	D:\QMDownload\bin\win64\udd.dll
+0x0000000074880000 - 0x000000007496d000 	D:\QMDownload\bin\win64\boost_regex-vc90-mt-1_44.dll
+0x000000006bba0000 - 0x000000006bbb7000 	D:\QMDownload\bin\win64\graphics_util.dll
+0x0000000076100000 - 0x0000000076167000 	D:\QMDownload\bin\win64\libmat.dll
+0x000000006bb50000 - 0x000000006bb92000 	D:\QMDownload\bin\win64\libmwhardcopy.dll
+0x000000006baf0000 - 0x000000006bb4a000 	D:\QMDownload\bin\win64\libuij.dll
+0x000000006b8e0000 - 0x000000006baec000 	D:\QMDownload\bin\win64\hgdatatypes.dll
+0x000000006b850000 - 0x000000006b8d6000 	D:\QMDownload\bin\win64\libmwlapack.dll
+0x00000000051f0000 - 0x000000000522b000 	D:\QMDownload\bin\win64\libmwgbtutils.dll
+0x0000000005230000 - 0x0000000005249000 	D:\QMDownload\bin\win64\libmwgbt.dll
+0x000000006b360000 - 0x000000006b844000 	C:\WINDOWS\WinSxS\amd64_microsoft.vc90.mfc_1fc8b3b9a1e18e3b_9.0.30729.6161_none_044aad0bab1eb146\mfc90.dll
+0x00007ffb942c0000 - 0x00007ffb94342000 	C:\WINDOWS\SYSTEM32\WINSPOOL.DRV
+0x000000006b2d0000 - 0x000000006b354000 	D:\QMDownload\bin\win64\profiler.dll
+0x0000000005270000 - 0x00000000054c5000 	D:\QMDownload\bin\win64\libmwmathutil.dll
+0x0000000079f40000 - 0x0000000079f6d000 	D:\QMDownload\bin\win64\libmwmathrng.dll
+0x000000006b2a0000 - 0x000000006b2c1000 	D:\QMDownload\bin\win64\m_pcodeio.dll
+0x0000000079b10000 - 0x0000000079b77000 	D:\QMDownload\bin\win64\m_ir.dll
+0x000000006ac50000 - 0x000000006b2a0000 	D:\QMDownload\bin\win64\m_parser.dll
+0x000000006ac10000 - 0x000000006ac41000 	D:\QMDownload\bin\win64\m_pcodegen.dll
+0x00000000054d0000 - 0x000000000553b000 	D:\QMDownload\bin\win64\libmwspmatrix.dll
+0x0000000005550000 - 0x000000000555e000 	D:\QMDownload\bin\win64\nativejava_services.dll
+0x000000006ac00000 - 0x000000006ac0f000 	D:\QMDownload\bin\win64\uinone.dll
+0x00007ffb8c140000 - 0x00007ffb8c15e000 	C:\WINDOWS\SYSTEM32\MPR.dll
+0x000000006abd0000 - 0x000000006abff000 	C:\WINDOWS\WinSxS\amd64_microsoft.vc90.atl_1fc8b3b9a1e18e3b_9.0.30729.6161_none_0a1fd3a3a768b895\ATL90.DLL
+0x00007ffb974e0000 - 0x00007ffb9750e000 	C:\WINDOWS\system32\SspiCli.dll
+0x0000000072d30000 - 0x0000000072f44000 	D:\QMDownload\bin\win64\hdf5dll.dll
+0x000000006abb0000 - 0x000000006abc2000 	D:\QMDownload\bin\win64\libmwbinder.dll
+0x000000006aba0000 - 0x000000006abab000 	D:\QMDownload\bin\win64\libmwompwrapper.dll
+0x00007ffb94350000 - 0x00007ffb94357000 	C:\WINDOWS\SYSTEM32\MSIMG32.dll
+0x0000000074c10000 - 0x0000000074ced000 	D:\QMDownload\bin\win64\libmwmathcore.dll
+0x000000006ab80000 - 0x000000006ab9a000 	D:\QMDownload\bin\win64\ir_xfmr.dll
+0x000000006ab70000 - 0x000000006ab7c000 	D:\QMDownload\bin\win64\mtok.dll
+0x00007ffb957f0000 - 0x00007ffb958a2000 	C:\WINDOWS\SYSTEM32\SHCORE.DLL
+0x0000000075ea0000 - 0x0000000075f02000 	D:\QMDownload\bin\win64\libmwcholmod.dll
+0x000000007a460000 - 0x000000007a46d000 	D:\QMDownload\bin\win64\libmwamd.dll
+0x000000007a4b0000 - 0x000000007a4bc000 	D:\QMDownload\bin\win64\libmwcolamd.dll
+0x000000006ab50000 - 0x000000006ab69000 	D:\QMDownload\bin\win64\libmwblas.dll
+0x00007ffb99bb0000 - 0x00007ffb99be6000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffb97640000 - 0x00007ffb97792000 	C:\WINDOWS\system32\MSCTF.dll
+0x00007ffb95c50000 - 0x00007ffb95d79000 	C:\WINDOWS\system32\UxTheme.dll
+0x00007ffb94fd0000 - 0x00007ffb94ff1000 	C:\WINDOWS\system32\dwmapi.dll
+0x000000006ab40000 - 0x000000006ab49000 	C:\WINDOWS\WinSxS\amd64_microsoft.vc90.mfcloc_1fc8b3b9a1e18e3b_9.0.30729.6161_none_01c9581e60cbee58\MFC90CHS.DLL
+0x00000000059d0000 - 0x00000000059f9000 	D:\QMDownload\bin\win64\tbbmalloc.dll
+0x0000000078870000 - 0x0000000078ecd000 	D:\QMDownload\sys\java\jre\win64\jre\bin\server\jvm.dll
+0x00007ffb94410000 - 0x00007ffb94432000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb94220000 - 0x00007ffb9424a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffb972b0000 - 0x00007ffb972ff000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffb95dd0000 - 0x00007ffb95df8000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ffb96fb0000 - 0x00007ffb96fc5000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007ffb90e90000 - 0x00007ffb90eba000 	C:\WINDOWS\SYSTEM32\iphlpapi.dll
+0x00007ffb90e70000 - 0x00007ffb90e7a000 	C:\WINDOWS\SYSTEM32\WINNSI.DLL
+0x00007ffb965f0000 - 0x00007ffb96694000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ffb90d20000 - 0x00007ffb90d36000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffb90d00000 - 0x00007ffb90d1a000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+0x00007ffb94170000 - 0x00007ffb94173000 	C:\WINDOWS\SYSTEM32\icmp.Dll
+0x00007ffb95e00000 - 0x00007ffb95e0b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb96f20000 - 0x00007ffb96f2b000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+
+VM Arguments:
+jvm_args: -Xss512k -XX:PermSize=32m -Xms64m -XX:NewRatio=3 -XX:MaxPermSize=128m -Xmx196m -XX:MaxDirectMemorySize=2147400000 -Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Xshare:off -Xrs -Dsun.awt.disableMixing=true -Djava.library.path=D:\QMDownload\bin\win64;D:\Personal\Desktop\digitaldesigin\14.7\ISE_DS\ISE\sysgen\bin;D:\Personal\Desktop\digitaldesigin\14.7\ISE_DS\ISE\sysgen\bin\nt64 vfprintf abort -Duser.language=en -Duser.country=US 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_20
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_20\lib;C:\Program Files\Java\jdk1.8.0_20\lib\tools.jar;
+PATH=D:\Personal\Desktop\URP\URP_LAB2\de-nova_latest\de-nova_latest\nova\trunk\test\site\bin;D:\Personal\Desktop\URP\URP_LAB2\de-nova_latest\de-nova_latest\nova\trunk\test\bin;C:\Python27\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_20\bin;C:\Program Files\Java\jdk1.8.0_20\jre\bin;C:\Program Files (x86)\Android\tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\wbem;C:\Program Files (x86)\MySQL\MySQL Server 5.7\bin;D:\CTEX\UserData\miktex\bin;D:\CTEX\MiKTeX\miktex\bin;D:\CTEX\CTeX\ctex\bin;D:\CTEX\CTeX\cct\bin;D:\CTEX\CTeX\ty\bin;D:\CTEX\Ghostscript\gs9.05\bin;D:\CTEX\GSview\gsview;D:\CTEX\WinEdt;D:\Personal\Desktop\atom-build\atom-build\Atom\resources\app\apm\node_modules\atom-package-manager\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\MinGW\bin;D:\QMDownload\v717\runtime\win64;D:\opencv\opencv\build\x86\vc11\bin
+USERNAME=jinpeng
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.2 Build 9200 
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, ht
+
+Memory: 4k page, physical 4140316k(1907428k free), swap 16502044k(12545344k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.3-b01) for windows-amd64 JRE (1.6.0_17-b04), built on Oct 11 2009 00:46:08 by "java_re" with MS VC++ 8.0
+
+time: Sun Aug 14 19:55:09 2016
+elapsed time: 9628 seconds
+
